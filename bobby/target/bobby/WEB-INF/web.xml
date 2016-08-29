@@ -17,7 +17,19 @@
     <filter-mapping>  
         <filter-name>encodingFilter</filter-name>  
         <url-pattern>/*</url-pattern>  
-    </filter-mapping> 
+    </filter-mapping>
+    
+    <filter>
+	  <filter-name>UrlRewriteFilter</filter-name>
+	  <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	  <filter-name>UrlRewriteFilter</filter-name>
+	  <url-pattern>/*</url-pattern>
+	  <dispatcher>REQUEST</dispatcher>
+	  <dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+    
     <listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
 	</listener>
@@ -62,7 +74,7 @@
     </context-param>  
   
     <welcome-file-list>  
-        <welcome-file>index.jsp</welcome-file>  
+        <welcome-file>/WEB-INF/jsp/index.jsp</welcome-file>  
     </welcome-file-list>  
   
 </web-app>  
