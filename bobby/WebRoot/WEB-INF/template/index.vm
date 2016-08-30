@@ -9,6 +9,8 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+		
+	<link href="css/basic.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -121,8 +123,12 @@
     		</div>
     		<div class="col-md-4 column">
 				<div class="row">
-					<div class="placeholder"></div>
-					<img src="/image/touxiang.png" class="img-circle touxiang">
+					<div class="placeholder"><br /></div>
+					<div class="span7 text-center">
+						<img src="/image/touxiang.png" class="img-circle" />
+						<h4>Bobby</h4>
+                        <h5><small>JAVA开发工程师</small></h5>
+                    </div>
                 </div>
     			<blockquote>
     				<p>
