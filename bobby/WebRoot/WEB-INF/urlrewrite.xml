@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlrewrite>
+<!-- 
+  <rule>
+      <name>seo redirect</name>
+      <condition name="host" operator="notequal">10.3.36.184:8080/bobby/</condition>
+      <from>^/(.*)</from>
+      <to type="permanent-redirect" last="true">http://10.3.36.184:8080/bobby/$1</to>
+  </rule>
+   -->
+</urlrewrite>

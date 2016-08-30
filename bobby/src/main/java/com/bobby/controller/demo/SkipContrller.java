@@ -23,6 +23,7 @@ public class SkipContrller {
 		mv.setViewName("test");
 		Member member=MemberServiceClient.getMemberById(1);
 		memberDB.insertMember(member);
+		System.out.println("ok");
 		return mv;
 	}
 }

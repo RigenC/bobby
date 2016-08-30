@@ -1,5 +1,5 @@
+com\bobby\controller\util\Index.class
 com\bobby\entity\Member.class
-com\bobby\util\Context.class
 com\bobby\service\member\MemberService.class
 com\bobby\controller\demo\SkipContrller.class
 com\bobby\db\imp\MemberMapper.class
