@@ -21,8 +21,6 @@ public class SkipContrller {
 	public ModelAndView test(){
 		ModelAndView mv=new ModelAndView();
 		mv.setViewName("test");
-		Member member=MemberServiceClient.getMemberById(1);
-		memberDB.insertMember(member);
 		System.out.println("ok");
 		return mv;
 	}

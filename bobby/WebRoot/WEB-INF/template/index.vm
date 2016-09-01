@@ -10,15 +10,18 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 		
-	<link href="css/basic.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+		<link href="css/index/style.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<script src="/js/jquery-3.1.0.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+	#set($content="bloglist")
   </head>
   <body>
+	<div class="bodybg">
     <div class="container">
     	<div class="row clearfix">
     		<div class="col-md-8 column">
@@ -82,33 +85,14 @@
     			</nav>
     		</div>
     	</div>
-    	<div class="row clearfix">
-    		<div class="col-md-8 column">
-    			<ol class="breadcrumb"> 
-    			    <li><a href="#">主页</a></li> 
-    			    <li><a href="#">博客</a></li> 
-    			    <li class="active">最新博客</li> 
-    			</ol>
-				#foreach($id in [0..2])
-					#parse("/article/articleitem.vm")
-				#end
+    	<div class="row clearfix ">
+    		<div class="col-md-8 column transparentbg indexminheight">
+    			#parse("/include/breadcrumb.vm");
+				
+				## #parse("/article/${content}.vm")
+				<div class="row">
+                </div>
     			
-    			<div class="media">
-    				 <a href="#" class="pull-left"><img src="v3/default7.jpg" class="media-object" alt='' /></a>
-    				<div class="media-body">
-    					<h4 class="media-heading">
-    						Nested media heading
-    					</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-    					<div class="media">
-    						 <a href="#" class="pull-left"><img src="v3/default8.jpg" class="media-object" alt='' /></a>
-    						<div class="media-body">
-    							<h4 class="media-heading">
-    								Nested media heading
-    							</h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
-    						</div>
-    					</div>
-    				</div>
-    			</div>
     			<div class="column">
     				<ul class="pagination pagination-sm"> 
     			    <li><a href="#">&laquo;</a></li> 
@@ -121,32 +105,16 @@
     			</ul>
     			</div>
     		</div>
-    		<div class="col-md-4 column">
-				<div class="row">
-					<div class="placeholder"><br /></div>
-					<div class="span7 text-center">
-						<img src="/image/touxiang.png" class="img-circle" />
-						<h4>Bobby</h4>
-                        <h5><small>JAVA开发工程师</small></h5>
-                    </div>
-                </div>
-    			<blockquote>
-    				<p>
-    					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-    				</p> <small>Someone famous <cite>Source Title</cite></small>
-    			</blockquote>
-    			<div class="row clearfix">
-    				<div class="col-md-12 column">
-    					 <span class="label label-primary">标签</span>
-    				</div>
-    			</div>
+    		<div class="col-md-4 column transparentbg indexminheight">
+				#parse("/aboutus/blogowner.vm")
     		</div>
     
-    	</div>
+		</div>
 	</div>
 	
     <script type="text/javascript">
 		$(".breadcrumb").collapse();
 	</script>
+	</div>
   </body>
 </html>
