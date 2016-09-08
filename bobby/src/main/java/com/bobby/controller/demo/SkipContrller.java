@@ -20,6 +20,8 @@ public class SkipContrller {
 	@RequestMapping("test")
 	public ModelAndView test(){
 		ModelAndView mv=new ModelAndView();
+		Member member=new Member("zhangsan", "123456");
+		memberDB.insertMember(member);
 		mv.setViewName("test");
 		System.out.println("ok");
 		return mv;

@@ -32,13 +32,11 @@
         <property name="minIdle" value="${db.minIdle}"></property>  
         <!-- 获取连接最大等待时间 -->  
         <property name="maxWait" value="${db.maxWait}"></property>  
-    </bean>  
-  
+    </bean>
     <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->  
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
         <property name="dataSource" ref="dataSource" />  
     </bean>
-  
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->  
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
         <property name="basePackage" value="com.bobby.db.imp" />  
@@ -47,6 +45,20 @@
     <bean id="transactionManager"  
         class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
         <property name="dataSource" ref="dataSource" />  
+    </bean>
+    <!-- jedis配置 -->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">  
+        <property name="maxTotal" value="${redis.maxActive}"/>  
+        <property name="maxIdle" value="${redis.maxIdle}"/>  
+        <property name="minIdle" value="${redis.minIdle}"/>  
+    </bean>  
+    <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">  
+        <property name="poolConfig" ref="jedisPoolConfig"/>  
+        <property name="hostName" value="${redis.address}"/>  
+        <property name="port" value="${redis.port}"/>  
+    </bean>
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">  
+        <property name="connectionFactory" ref="jedisConnectionFactory"/>  
     </bean>  
 	<import resource="ws-client-config.xml"/>
 	<import resource="ws-server-config.xml"/>

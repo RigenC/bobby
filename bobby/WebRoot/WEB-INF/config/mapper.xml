@@ -8,6 +8,8 @@
        <typeAlias alias=" MemberMapper" type="MemberMapper"/>   
     </typeAliases>     
     <mappers>   
-        <mapper class="com.bobby.db.imp.MemberMapper" />   
+        <mapper class="com.bobby.db.imp.MemberMapper" />
+        <mapper class="com.bobby.db.imp.CommentMapper" />
+        <mapper class="com.bobby.db.imp.BlogMapper" />
     </mappers>   
 </configuration> 

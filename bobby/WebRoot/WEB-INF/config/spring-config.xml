@@ -10,7 +10,8 @@
      http://www.springframework.org/schema/context 
      http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.bobby.controller"></context:component-scan> 
+    <context:component-scan base-package="com.bobby.controller"></context:component-scan>
+    <context:component-scan base-package="com.bobby.redis"></context:component-scan> 
     <mvc:annotation-driven/>
 	<mvc:resources location="/WEB-INF/resources/js/" mapping="/js/**"></mvc:resources>
 	<mvc:resources location="/WEB-INF/resources/image/" mapping="/image/**"></mvc:resources>

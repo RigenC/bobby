@@ -34,7 +34,6 @@
 	  <dispatcher>FORWARD</dispatcher>
 	</filter-mapping> -->
     
-    
     <listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
 	</listener>

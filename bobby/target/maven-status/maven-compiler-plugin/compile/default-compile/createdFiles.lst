@@ -1,6 +1,11 @@
 com\bobby\controller\util\Index.class
-com\bobby\entity\Member.class
+com\bobby\redis\RedisService$1.class
 com\bobby\service\member\MemberService.class
 com\bobby\controller\demo\SkipContrller.class
+com\bobby\controller\blog\BlogController.class
+com\bobby\redis\RedisService.class
+com\bobby\redis\RedisService$2.class
+com\bobby\entity\Member.class
 com\bobby\db\imp\MemberMapper.class
 com\bobby\service\member\imp\IMemberService.class
+com\bobby\redis\imp\IRedisService.class
