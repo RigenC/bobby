@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"  
+    xsi:schemaLocation="  
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">  
+  
+	<bean id="viewresolver" class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+		<property name="prefix" value="/"></property>
+		<property name="suffix" value=".vm"></property>
+		<property name="order" value="1"></property>
+		<property name="contentType"><value>text/html;charset=UTF-8</value></property> 
+	</bean>
+</beans> 
