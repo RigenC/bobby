@@ -61,5 +61,4 @@
         <property name="connectionFactory" ref="jedisConnectionFactory"/>  
     </bean>  
 	<import resource="ws-client-config.xml"/>
-	<import resource="ws-server-config.xml"/>
 </beans>

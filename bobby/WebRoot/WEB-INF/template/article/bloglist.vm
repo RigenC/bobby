@@ -1,0 +1,36 @@
+#foreach($id in [0..2])
+<div class="col-sm-4 column thumbnailposition">
+	<a href="#" class="thumbnail">
+            <img src="/image/demo.png" 
+                 alt="通用的占位符缩略图">
+    </a>
+</div>
+<div class="col-sm-8 column">
+    <div class="row">
+        <div class="col-xs-12 column">
+			<a href="/blog/"><h3>JAVA urlrewrite实现301重定向${id}</h3></a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 column">
+			<ul class="list-inline">
+        		<li><p class="text-left list-inline articleproperty">2016-05-04</p></li>
+        		<li><p class="text-middle list-inline articleproperty">14 阅读</p></li>
+        		<li>
+					<p class="text-right list-inline articleproperty">&nbsp;&nbsp;&nbsp;
+            			<a href="#" class="tags-link">JAVA</a>
+						<a href="#" class="tags-link">HTML</a>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+    
+    <p>
+    	Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    </p>
+    <p>
+    	 <a class="btn" href="#">View details »</a>
+    </p>
+</div>
+#end

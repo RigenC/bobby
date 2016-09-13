@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="placeholder"><br /></div>
+    <div class="span7 text-center ">
+    	<img src="/image/touxiang.png" class="img-circle" />
+    	<h4>Bobby</h4>
+        <h5><small>JAVA开发工程师</small></h5>
+    </div>
+</div>
+<div class="whitebg">
+	<div class="row paddingdiv">
+
+    	<h4 class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;热门标签</h4>
+    	<div class="col-md-12 column">
+    		#parse("/hot/label.vm")
+        </div>
+    </div>
+</div>
+<blockquote>
+	<p>
+		我渴望见到你，但是请你记得，我不会向你提出我想见你，这不是因为骄傲，你应该知道在你面前，丝毫没有骄傲可言，而是因为在你也想见我的时候，我想见你才会有意义
+	</p> <small>西蒙娜·德·波伏娃 <cite>法国哲学家</cite></small>
+</blockquote>
+					

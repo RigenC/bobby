@@ -1,0 +1,5 @@
+<ol class="breadcrumb allopacity"> 
+    <li><a href="#">主页</a></li> 
+    <li><a href="#">博客</a></li> 
+    <li class="active">最新博客</li> 
+</ol>

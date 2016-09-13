@@ -7,10 +7,9 @@ import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
-
+import com.bobby.commons.service.member.IMemberService;
 import com.bobby.db.imp.MemberMapper;
 import com.bobby.entity.Member;
-import com.bobby.service.member.imp.IMemberService;
 @Controller
 public class SkipContrller {
 	@Resource

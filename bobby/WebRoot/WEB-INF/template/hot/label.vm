@@ -1,0 +1,16 @@
+<div class="row clearfix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" class="tags-link">JAVA</a>
+    <a href="#" class="tags-link">PYTHON</a>
+	<a href="#" class="tags-link">JAVASCRIPT</a>
+</div>
+<br />
+<div class="row clearfix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" class="tags-link">MYSQL</a>
+	<a href="#" class="tags-link">MONGODB</a>
+	<a href="#" class="tags-link">LINUX</a>
+</div>
+<br />
+<div class="row clearfix">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" class="tags-link">MAVEN</a>
+	<a href="#" class="tags-link">CSS</a>
+</div>

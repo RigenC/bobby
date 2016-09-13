@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>  
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
 	xsi:schemaLocation=" http://www.springframework.org/schema/beans  
@@ -8,9 +8,9 @@
     <import resource="classpath:META-INF/cxf/cxf.xml" />
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
       
-    <bean id="MemberServiceClient" class="com.bobby.service.member.imp.IMemberService" factory-bean="memberclientFactory" factory-method="create"/>  
+    <bean id="MemberServiceClient" class="com.bobby.commons.service.member.IMemberService" factory-bean="memberclientFactory" factory-method="create"/>  
     <bean id="memberclientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">  
-        <property name="serviceClass" value="com.bobby.service.member.imp.IMemberService"/>  
+        <property name="serviceClass" value="com.bobby.commons.service.member.IMemberService"/>  
         <property name="address" value="${service.member.url}"/>  
     </bean>
-</beans>  
+</beans>
