@@ -5,7 +5,7 @@
 		<title>bootstrap案例</title>
 		<!--用百度的静态资源库的cdn安装bootstrap环境-->
 		<!-- Bootstrap 核心 CSS 文件 -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
 		<!--font-awesome 核心我CSS 文件-->
 		<link href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 			
@@ -38,28 +38,26 @@
 		-->
 	<div class="container">
 		<div class="form row registerrow">
-			<form action="/register" method="post" class="form-horizontal col-sm-offset-3 col-md-offset-3" id="register_form">
-				<h3 class="form-title">注册</h3>
+			<form action="/logincheck" method="post" class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form">
+				<h3 class="form-title">登录</h3>
 				<div class="col-sm-9 col-md-9">
 					<div class="form-group">
 						<i class="fa fa-user fa-lg"></i>
-						<input class="form-control required" type="text" placeholder="Username" name="username" autofocus="autofocus"/>
+						<input class="form-control required" type="text" placeholder="Username" name="username" autofocus="autofocus" maxlength="20"/>
 					</div>
 					<div class="form-group">
 							<i class="fa fa-lock fa-lg"></i>
-							<input class="form-control required" type="password" placeholder="Password" id="register_password" name="password"/>
+							<input class="form-control required" type="password" placeholder="Password" name="password" maxlength="8"/>
 					</div>
 					<div class="form-group">
-							<i class="fa fa-check fa-lg"></i>
-							<input class="form-control required" type="password" placeholder="Re-type Your Password" name="rpassword"/>
+						<label class="checkbox">
+							<input type="checkbox" name="remember" value="1"/> Remember me
+						</label>
+						<hr />
+						<a href="register" id="register_btn" class="">Create an account</a>
 					</div>
 					<div class="form-group">
-							<i class="fa fa-envelope fa-lg"></i>
-							<input class="form-control eamil" type="text" placeholder="Email" name="email"/>
-					</div>
-					<div class="form-group">
-						<input type="submit" onclick="javascript:" class="btn btn-success pull-right" value="Sign Up "/>
-						<input type="submit" onclick="location.href='login'" class="btn btn-info pull-left" id="back_btn" value="Sign In"/>
+						<input type="submit" class="btn btn-success pull-right" value="Login "/>   
 					</div>
 				</div>
 			</form>

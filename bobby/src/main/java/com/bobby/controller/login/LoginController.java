@@ -9,10 +9,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class LoginController {
 	@RequestMapping("login")
-	public ModelAndView loginSkip(){
+	public ModelAndView login(){
 		ModelAndView mv=new ModelAndView();
 		mv.setViewName("login/login");
-		mv.addObject("isLogin", true);
+		mv.addObject("login", true);
 		return mv;
 	}
 	@RequestMapping(value="logincheck",method=RequestMethod.POST)

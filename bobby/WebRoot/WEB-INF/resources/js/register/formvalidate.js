@@ -17,7 +17,16 @@ $().ready(function() {
 	});
 	$("#register_form").validate({
 		rules: {
-			username: "required",
+			username: {
+				required:true,
+				remote:{
+		               type:"POST",
+		               url:"checkUserName",
+		               data:{
+		                 username:function(){return $("[name='username']").val();}
+		               }
+		              }
+			},
 			password: {
 				required: true,
 				minlength: 6
@@ -46,13 +55,8 @@ $().ready(function() {
 		}
 	});
 });
-$(function() {
-	$("#register_btn").click(function() {
-		$("#register_form").css("display", "block");
-		$("#login_form").css("display", "none");
-	});
-	$("#back_btn").click(function() {
-		$("#register_form").css("display", "none");
-		$("#login_form").css("display", "block");
-	});
-});
+function signUp(){
+	var form=$("register_form");
+	form.attr("action","registerAccount");
+	form.submit();
+}
